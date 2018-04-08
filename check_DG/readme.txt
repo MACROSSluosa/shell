@@ -1,2 +1,4 @@
 此文件用来检查生产环境互联网支付数据库oracle的datagruand 日志一致性
+需要在安装oracle用户的Linux中以oracle用户运行
+以run_check.sh配置计划任务，注意要添加环境变量
 
