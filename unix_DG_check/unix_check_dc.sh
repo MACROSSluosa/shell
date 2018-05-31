@@ -1,4 +1,5 @@
 #!/bin/bash
+#使用了绝对路径，防止在contab下发生因为环境变量导致的错误
 source /home/oracle/.profile
 /u02/app/oracle/product/11.2.0/db_1/bin/sqlplus system/oracle@//10.180.222.100/hlwzfdb<<EOF
 @/home/oracle/DG_check/DGlog.sql
