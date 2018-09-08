@@ -32,7 +32,7 @@ xlinst.PARAM_PURCHASELIST_NOINVOICE
 
 for one in $list
     do
-        db2 -v "load from  /sdgs/import/$one.ixf  of ixf  replace into $one">>replace.log
+        db2 -v "load from  /sdgs/import/$one.ixf  of ixf  replace into $one nonrecoverable ">>replace.log
 
         if [ $? -ne 0 ];then
             echo "error table:$one">>error.log
