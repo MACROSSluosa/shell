@@ -1,0 +1,1267 @@
+hlwzf1
+# IBM_PROLOG_BEGIN_TAG 
+# This is an automatically generated prolog. 
+#  
+# bos61D src/bos/usr/sbin/netstart/hosts 1.2 
+#  
+# Licensed Materials - Property of IBM 
+#  
+# COPYRIGHT International Business Machines Corp. 1985,1989 
+# All Rights Reserved 
+#  
+# US Government Users Restricted Rights - Use, duplication or 
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp. 
+#  
+# @(#)47	1.2  src/bos/usr/sbin/netstart/hosts, cmdnet, bos61D, d2007_49A2 10/1/07 13:57:52
+# IBM_PROLOG_END_TAG 
+# 
+# COMPONENT_NAME: TCPIP hosts
+# 
+# FUNCTIONS: loopback 
+#
+# ORIGINS: 26  27 
+#
+# (C) COPYRIGHT International Business Machines Corp. 1985, 1989
+# All Rights Reserved
+# Licensed Materials - Property of IBM
+#
+# US Government Users Restricted Rights - Use, duplication or
+# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+#
+#  /etc/hosts
+#
+# This file contains the hostnames and their address for hosts in the
+# network.  This file is used to resolve a hostname into an Internet
+# address.  
+#
+# At minimum, this file must contain the name and address for each
+# device defined for TCP in your /etc/net file.  It may also contain
+# entries for well-known (reserved) names such as timeserver
+# and printserver as well as any other host name and address.
+#
+# The format of this file is:
+# Internet Address	Hostname	# Comments
+# Internet Address can be either IPv4 or IPv6 address.
+# Items are separated by any number of blanks and/or tabs.  A '#'
+# indicates the beginning of a comment; characters up to the end of the
+# line are not interpreted by routines which search this file.  Blank
+# lines are allowed.
+
+# Internet Address	Hostname	# Comments
+# 192.9.200.1     	net0sample	# ethernet name/address
+# 128.100.0.1		token0sample	# token ring name/address
+# 10.2.0.2		x25sample	# x.25 name/address
+# 2000:1:1:1:209:6bff:feee:2b7f		ipv6sample	# ipv6 name/address
+127.0.0.1		loopback localhost	# loopback (lo0) name/address
+::1			loopback localhost	# IPv6 loopback (lo0) name/address
+10.180.222.100	hlwzf1
+10.180.222.101  hlwzf2
+
+192.168.100.10  hlwzf1-priv
+192.168.100.11  hlwzf2-priv
+
+10.180.222.102  hlwzf1-vip
+10.180.222.103  hlwzf2-vip
+
+10.180.222.104  hlwzf-scan
+10.180.0.31     ddbak
+10.180.0.32	backup
+
+System configuration: lcpu=8 mem=47360MB
+
+kthr    memory              page              faults        cpu    
+----- ----------- ------------------------ ------------ -----------
+ r  b   avm   fre  re  pi  po  fr   sr  cy  in   sy  cs us sy id wa
+ 5  0 8088519 1544167   0   0   0   0    0   0 2568 67502 11006 66  6 28  0
+rootvg:
+PV_NAME           PV STATE          TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+hdisk0            active            558         12          00..00..00..00..12
+hdisk1            active            558         0           00..00..00..00..00
+Filesystem    GB blocks      Free %Used    Iused %Iused Mounted on
+/dev/hd4           2.00      1.69   16%    10507     3% /
+/dev/hd2           4.00      1.09   73%    44798    15% /usr
+/dev/hd9var        4.00      3.37   16%     6225     1% /var
+/dev/hd3           2.00      1.12   45%      758     1% /tmp
+/dev/hd1           0.50      0.42   16%      713     1% /home
+/dev/hd11admin      0.50      0.50    1%        5     1% /admin
+/proc                 -         -    -         -     -  /proc
+/dev/hd10opt       0.50      0.19   62%    12067    21% /opt
+/dev/livedump      0.50      0.50    1%        4     1% /var/adm/ras/livedump
+/dev/u01          80.00     52.25   35%    33249     1% /u01
+/dev/u02          80.00     70.21   13%    46350     1% /u02
+/dev/lvdbbak     135.00     55.44   59%       18     1% /dbbak
+crw-rw----    1 grid     asmadmin     20, 51 Sep 26 2016  rhdisk51
+crw-rw----    1 grid     asmadmin     20, 52 Sep 26 2016  rhdisk52
+crw-rw----    1 grid     asmadmin     20, 53 Sep 26 2016  rhdisk53
+crw-rw----    1 grid     asmadmin     20, 54 Sep 26 2016  rhdisk54
+crw-rw----    1 grid     asmadmin     20, 55 Sep 26 2016  rhdisk55
+crw-rw----    1 grid     asmadmin     20, 56 Sep 26 2016  rhdisk56
+crw-rw----    1 grid     asmadmin     20, 57 Oct 13 13:00 rhdisk57
+crw-rw----    1 grid     asmadmin     20, 58 Oct 13 12:20 rhdisk58
+crw-rw----    1 grid     asmadmin     20, 59 Oct 13 12:20 rhdisk59
+crw-rw----    1 grid     asmadmin     20, 60 Oct 13 12:00 rhdisk60
+crw-rw----    1 grid     asmadmin     20, 61 Oct 13 12:00 rhdisk61
+crw-rw----    1 grid     asmadmin     20, 62 Oct 13 12:00 rhdisk62
+crw-rw----    1 grid     asmadmin     40,  0 Jan 03 11:11 rhdiskpower0
+crw-rw----    1 grid     asmadmin     40,  1 Jan 03 10:31 rhdiskpower1
+crw-rw----    1 grid     asmadmin     40, 10 Jan 03 10:31 rhdiskpower10
+crw-rw----    1 grid     asmadmin     40, 11 Jan 03 10:31 rhdiskpower11
+crw-rw----    1 grid     asmadmin     40,  2 Jan 03 11:11 rhdiskpower2
+crw-rw----    1 grid     asmadmin     40,  3 Jan 03 11:11 rhdiskpower3
+crw-rw----    1 grid     asmadmin     40,  4 Jan 03 09:17 rhdiskpower4
+crw-rw----    1 grid     asmadmin     40,  5 Jan 03 10:31 rhdiskpower5
+crw-rw----    1 grid     asmadmin     40,  6 Sep 29 2015  rhdiskpower6
+crw-rw----    1 grid     asmadmin     40,  7 Sep 29 2015  rhdiskpower7
+crw-rw----    1 grid     asmadmin     40,  8 Sep 29 2015  rhdiskpower8
+crw-rw----    1 grid     asmadmin     40,  9 Jan 03 10:31 rhdiskpower9
+State    Type    Rebal  Sector  Block       AU  Total_MB  Free_MB  Req_mir_free_MB  Usable_file_MB  Offline_disks  Voting_files  Name
+MOUNTED  NORMAL  N         512   4096  1048576     30720    29794            10240            9777              0             Y  CRS/
+MOUNTED  NORMAL  N         512   4096  1048576   1228800  1094284           307200          393542              4             N  DATA/
+MOUNTED  NORMAL  N         512   4096  1048576    614400   565246                0          282623              2             N  FRA/
+Path
+
+
+
+
+
+
+/dev/rhdiskpower0
+/dev/rhdiskpower1
+/dev/rhdiskpower10
+/dev/rhdiskpower11
+/dev/rhdiskpower2
+/dev/rhdiskpower3
+/dev/rhdiskpower4
+/dev/rhdiskpower5
+/dev/rhdiskpower9
++ASM1.asm_diskgroups='DATA','FRA','CRSMR','CRSMRR'#Manual Mount
++ASM2.asm_diskgroups='DATA','FRA','CRSMR','CRSMRR'#Manual Mount
+*.asm_diskgroups='DATA','FRA','CRSMRR'
+*.asm_power_limit=1
+*.diagnostic_dest='/u01/app/grid'
+*.instance_type='asm'
+*.large_pool_size=12M
+*.remote_login_passwordfile='EXCLUSIVE'
+
+
+PATH=/usr/bin:/etc:/usr/sbin:/usr/ucb:$HOME/bin:/usr/bin/X11:/sbin:.
+
+export PATH
+
+if [ -s "$MAIL" ]           # This is at Shell startup.  In normal
+then echo "$MAILMSG"        # operation, the Shell checks
+fi                          # periodically.
+
+umask 022
+if [ -t 0 ]; then
+stty intr ^C
+fi 
+export AIXTHREAD_SCOPE=S
+export ORACLE_SID=hlwzfdb1
+export ORACLE_BASE=/u02/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/db_1
+export PATH=$ORACLE_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$ORACLE_HOME/rdbms/lib:/lib:/usr/lib
+export CLASSPATH=$ORACLE_HOME/JRE:$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib:$ORACLE_HOME/network/jlb
+export ORACLE_OWNER=oracle
+
+OPatch Version: 11.2.0.3.4
+
+OPatch succeeded.
+Oracle Interim Patch Installer version 11.2.0.3.4
+Copyright (c) 2012, Oracle Corporation.  All rights reserved.
+
+
+Oracle Home       : /u02/app/oracle/product/11.2.0/db_1
+Central Inventory : /u01/app/oraInventory
+   from           : /u02/app/oracle/product/11.2.0/db_1/oraInst.loc
+OPatch version    : 11.2.0.3.4
+OUI version       : 11.2.0.4.0
+Log file location : /u02/app/oracle/product/11.2.0/db_1/cfgtoollogs/opatch/opatch2018-01-03_11-18-19AM_1.log
+
+Lsinventory Output file location : /u02/app/oracle/product/11.2.0/db_1/cfgtoollogs/opatch/lsinv/lsinventory2018-01-03_11-18-19AM.txt
+
+--------------------------------------------------------------------------------
+Installed Top-level Products (1): 
+
+Oracle Database 11g                                                  11.2.0.4.0
+There are 1 products installed in this Oracle Home.
+
+
+There are no Interim patches installed in this Oracle Home.
+
+
+Rac system comprising of multiple nodes
+  Local node = hlwzf1
+  Remote node = hlwzf2
+
+--------------------------------------------------------------------------------
+
+OPatch succeeded.
+--------------------------------------------------------------------------------
+NAME           TARGET  STATE        SERVER                   STATE_DETAILS       
+--------------------------------------------------------------------------------
+Local Resources
+--------------------------------------------------------------------------------
+ora.CRS.dg
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+ora.CRSMRR.dg
+               OFFLINE OFFLINE      hlwzf1                                       
+               OFFLINE OFFLINE      hlwzf2                                       
+ora.DATA.dg
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+ora.FRA.dg
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+ora.LISTENER.lsnr
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+ora.asm
+               ONLINE  INTERMEDIATE hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                   Started             
+ora.gsd
+               OFFLINE OFFLINE      hlwzf1                                       
+               OFFLINE OFFLINE      hlwzf2                                       
+ora.net1.network
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+ora.ons
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+ora.registry.acfs
+               ONLINE  ONLINE       hlwzf1                                       
+               ONLINE  ONLINE       hlwzf2                                       
+--------------------------------------------------------------------------------
+Cluster Resources
+--------------------------------------------------------------------------------
+ora.LISTENER_SCAN1.lsnr
+      1        ONLINE  ONLINE       hlwzf1                                       
+ora.cvu
+      1        ONLINE  ONLINE       hlwzf1                                       
+ora.hlwzf1.vip
+      1        ONLINE  ONLINE       hlwzf1                                       
+ora.hlwzf2.vip
+      1        ONLINE  ONLINE       hlwzf2                                       
+ora.hlwzfdb.db
+      1        ONLINE  ONLINE       hlwzf1                   Open                
+      2        ONLINE  ONLINE       hlwzf2                   Open                
+ora.oc4j
+      1        ONLINE  ONLINE       hlwzf1                                       
+ora.scan1.vip
+      1        ONLINE  ONLINE       hlwzf1                                       
+ORA-1109 signalled during: ALTER DATABASE CLOSE NORMAL...
+ORA-00313: open failed for members of log group 1 of thread 1
+ORA-00313: open failed for members of log group 1 of thread 1
+ORA-00313: open failed for members of log group 1 of thread 1
+ORA-00313: open failed for members of log group 2 of thread 1
+ORA-00313: open failed for members of log group 2 of thread 1
+ORA-00313: open failed for members of log group 2 of thread 1
+ORA-00313: open failed for members of log group 5 of thread 1
+ORA-00313: open failed for members of log group 5 of thread 1
+ORA-00313: open failed for members of log group 5 of thread 1
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: aaqug5fw8cf9n, Query Duration=59374 sec, SCN: 0x0000.01018026):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-20000: Unable to analyze TABLE "PAYADM"."CMP3$105923", insufficient privileges or does not exist
+ORA-01555 caused by SQL statement below (SQL ID: agcy5v6vys4gm, Query Duration=12184 sec, SCN: 0x0000.021ce3ec):
+ORA-20000: Unable to analyze TABLE "PAYADM"."CMP3$105888", insufficient privileges or does not exist
+ORA-20000: Unable to analyze TABLE "PAYADM"."CMP4$105888", insufficient privileges or does not exist
+ORA-15080: synchronous I/O operation to a disk failed
+ORA-27063: number of bytes read/written is incorrect
+ORA-29770: global enqueue process LMON (OSID 20119698) is hung for more than 70 seconds
+ORA-1092 : opitsk aborting process
+ORA-1092 : opitsk aborting process
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.049b0aae):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.04b5a991):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.04c7cc11):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.04f25b89):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.053fce1f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.05533e0c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.055b02ae):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.055c7707):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4801 sec, SCN: 0x0000.056446d6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.05663252):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.057925b2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.058602ff):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.059025c1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.05ae7291):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.05d0a085):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.05e36312):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.05ef49d2):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.05ffe297):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.0607a59a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.06085d6f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.060a214c):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.06123370):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.061393f6):
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)    
+WARNING: inbound connection timed out (ORA-3136)    nt secondary err code: 0
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.0627828a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.063049f6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.063c71c6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4801 sec, SCN: 0x0000.06505fe8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.0664d98b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.06ab62cc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.06e1c6ef):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.070bf8ad):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.073b28e7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.074de4b4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.074f5fb2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.07578182):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.076ddac1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.07ab0b34):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.07b3e8e0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.07f6854f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.0833d2f5):
+WARNING: inbound connection timed out (ORA-3136)
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.08648096):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4801 sec, SCN: 0x0000.08665525):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.08e5d644):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.08fec139):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.09936c18):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.09b074cb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.09b782ac):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.09b9b013):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.09d9dd45):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.0a215705):
+opiodr aborting process unknown ospid (22544422) as a result of ORA-609
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.0ae8871f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.0b0b5e5b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.0b5008b1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.0b99b0b9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.0bc1641f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.0c03ac55):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.0c0fbacc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9906 sec, SCN: 0x0000.0c58607d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.0c62d111):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.0c81cb2a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.0c9e475b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.0ca85878):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.0cb59cb4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.0cf01e71):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.0d06ff87):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.0d74e19d):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.0dab8b05):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.0dcd5402):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.0dce6be3):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.0dea7237):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.0e0782ba):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.0e11d0c2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.0e2419ad):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.0e273966):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.0e340d5f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9908 sec, SCN: 0x0000.0e384005):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4801 sec, SCN: 0x0000.0ea2fe8f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.0eb1f996):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9906 sec, SCN: 0x0000.0ec99689):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.13c20f37):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.1413d7b2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.14209c88):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.15360af8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.1676e8ea):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.167ce6bd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.16cf263f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.177c8ef5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.18654b8c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.19e1d7ee):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.1a33c51d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.1b1d3e1b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.1bd624c0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.1be5b080):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.1c797262):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.1c98f378):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.1cd84041):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.1d1da11b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.1d3b2afe):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.1e2d367b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.1e3c8826):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.1ed189bc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.208533b4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9907 sec, SCN: 0x0000.20a8a2d5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.2102056f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.228838da):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9921 sec, SCN: 0x0000.24082f63):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.24ec29f8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.2515bfb4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.2542fe0e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.25510ca8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.255710ff):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.256d5fbd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.265d0fa2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.2679f66b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.2812b9b0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.281a0eaa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.282cfb50):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.2837c64e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.286984c6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9907 sec, SCN: 0x0000.28879e10):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.2892a63f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.28c3ddb2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.28cfb5ec):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.2933cfcf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.29f450eb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.2a28a805):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.2a42cc5a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.2a54b152):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.2aa8276f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.2b013cb4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.2b07d2ca):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.2c99e49c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.2ca133dd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.2cae602d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9906 sec, SCN: 0x0000.2cb49ae8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.2cc057a1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.2ccbdfac):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.2d103c92):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.2d50d785):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.2d580bc8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.2d6aaf60):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.2d764c22):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9908 sec, SCN: 0x0000.2d825837):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.2e60e81d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.2e675fd0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.2e6d5ba3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9922 sec, SCN: 0x0000.2ecada32):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.2f2cfc00):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.2f3dee8b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.2f7b59ff):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.2f8e5f64):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.2f948e4f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.2fdd282b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.2fe33d24):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.2fe95463):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.3129c8cd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.312f8d19):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.314b008c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9904 sec, SCN: 0x0000.319d841a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.31de3fca):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.31e405aa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.31ea700f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.31f61694):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.323ba078):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.328ac5e4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.333a9a13):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.33488699):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.339a21a9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4822 sec, SCN: 0x0000.33a1c9f6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.33fcc050):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.341302b9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.345d56fd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.346975f1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.346f6d52):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.34af1835):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.34b913cb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.34cb5452):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.34d13d74):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.34e21861):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.35224cb3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.353c257c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.358fa021):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.35cec3aa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.35d4faf7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.35db29ef):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.35e13c3f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.35ec025c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3621cacc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.36277b84):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.362d9eee):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.3633836c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.367b8f4f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.36813881):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9907 sec, SCN: 0x0000.369130a0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.36d1b163):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.36d75c1d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.36dd40dd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.36e3378a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.36f3d051):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.372fca40):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.3735df0f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.373bca1b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.3831855c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.3837a76d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.384b1cbd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.385601a6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.388c2813):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.38926948):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.389f7e7a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.38a63551):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.38b0d3a9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.38edb188):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.38f3ea02):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.393cdd4d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.394faef4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4819 sec, SCN: 0x0000.3955e60a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.396bc5eb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.39ae2dcd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.39b487ac):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.39bf40c1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.39ee98ae):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3a0a5870):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.3a10663b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.3a46a464):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.3b116429):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.3b44b436):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3b58440a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.3b5e339e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.3b64443a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.3b70c2d2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.3b9d8231):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.3ba4a188):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.3bc2d6f1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3c09939d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.3c0fbf87):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.3c6fbb7f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.3cb3121e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3cc235d2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.3cd3344f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3d2040a6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.3db3f688):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.3dc8bc3d):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9908 sec, SCN: 0x0000.3ddaaa06):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9905 sec, SCN: 0x0000.3e38538d):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.3e7dba7f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.3e841bd9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.3e8fa85a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.3f9ee80f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.3fec9dd0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.3ff4049c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9923 sec, SCN: 0x0000.3ffa38a2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.4054e11c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.4093c905):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.40aba489):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.40b77404):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.40efef33):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.411bc262):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4817 sec, SCN: 0x0000.41a7c9a9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.41b6aa80):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.42223113):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.42bb2a18):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9908 sec, SCN: 0x0000.42ed3276):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.43477b2c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.437a8b0a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.439422b4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4821 sec, SCN: 0x0000.43e0ddce):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.43fdb314):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.4455c2c9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.448c74cd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.4541e12b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.4549a0e8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.4550b564):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.4727e43e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.4771a408):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.47785c3f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.477fb284):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.4787a24e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.47947559):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.47f3882c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.480a7be3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.48481105):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.48571f02):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4442 sec, SCN: 0x0000.48a2c10a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.48b3ffb3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.4a4ebdde):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.4a8e8635):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.4aa7ec56):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.4aae295b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.4ab949aa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.4af160e1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.4af7ac05):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.4afd3bf4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.4b092613):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.4b0eaffd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.4cd9ff7c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.4cea0aa0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.4cfacade):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.4d01f999):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.4d361dd1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4823 sec, SCN: 0x0000.4d4c5b80):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.4d5f8264):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4818 sec, SCN: 0x0000.4d95f030):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.4da89f14):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9905 sec, SCN: 0x0000.4db4c322):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.4dbfc356):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.4e194eba):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.4e558ad1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.4e6fe4ee):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.4e7b47e8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.4eb1d7f1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.4ec44492):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.4eddecbf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.4f338a5e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4817 sec, SCN: 0x0000.4fd04308):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9927 sec, SCN: 0x0000.4fd7aa35):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9814 sec, SCN: 0x0000.503ea369):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9383 sec, SCN: 0x0000.504ac719):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9905 sec, SCN: 0x0000.504cfc2b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.508a6925):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.509e7f0c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.50be470d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.50facf45):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9922 sec, SCN: 0x0000.51082883):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.516ee54a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.5174cace):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.518039bc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.51b7d690):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.520ad71c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.521d555b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.523870ac):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.527b0f7b):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.535bcbca):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.53aa9804):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.53b1de78):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.53cb8794):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.541b4137):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.54268000):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.545b0819):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.54b7e389):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.54cbc6f5):
+ORA-00600: internal error code, arguments: [kkqfppPsh:rec_fro1], [], [], [], [], [], [], [], [], [], [], []
+ORA-00600: internal error code, arguments: [kkqfppPsh:rec_fro1], [], [], [], [], [], [], [], [], [], [], []
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.5515e631):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.56f9ab96):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9922 sec, SCN: 0x0000.57009878):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.57d35ced):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9926 sec, SCN: 0x0000.583e722e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.5b7b18d6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.5c291c3b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.5c38e00e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.5c3f863e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.5c50f528):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.5caf3336):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.5cb564cd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.5ce7ac5b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.5cf45f64):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.5d12352a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.5d234e8f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.5f474bd0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.5fad1346):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.5fd110af):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15027 sec, SCN: 0x0000.5fe609ad):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.603dd653):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.6044dd17):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4817 sec, SCN: 0x0000.604b71a0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.605315db):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.6060bd28):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.60a90163):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.60bd50d5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.60ca5db4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.62128a2c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.624dcddc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.6255599b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.6263a0d9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.6271fe99):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.63423330):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.63493453):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.63554d79):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.648b8120):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.649368d9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4821 sec, SCN: 0x0000.64d8a458):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.6544f47c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.654bebcd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.65b03115):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.65ccb8b5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.65d8f092):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.662cc8a8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9905 sec, SCN: 0x0000.6639dbf0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.66470757):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9927 sec, SCN: 0x0000.66810c79):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.668f0540):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.669bb379):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.66f2cc0b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.6701cd3d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.6708190b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.674ba811):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.67531a30):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.675f9338):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.6797cbff):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.67a05a52):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.6805b20f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4818 sec, SCN: 0x0000.6878a436):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.68807c2b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.6888981d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.68907025):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.689e0e76):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.68e41827):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.68faeff5):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.6a1d46fc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.6aae4743):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.6ae27b4f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.6ae95959):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.6af04d92):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.6afd9d9c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9540 sec, SCN: 0x0000.6af8197e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.6bc6933f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.6c23ad54):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.6c2bf8ea):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.6c4247b7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9924 sec, SCN: 0x0000.6c5c1107):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.6ca813da):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9924 sec, SCN: 0x0000.6d2bb7de):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.6de9e116):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4801 sec, SCN: 0x0000.6dff604d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.6e595fbf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9905 sec, SCN: 0x0000.6e6d83bb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4817 sec, SCN: 0x0000.6ea3be2a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.6eb2d6f5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15017 sec, SCN: 0x0000.6ed9dc30):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.6f38ce52):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.6f816cbc):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.6f8827c9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.6fd35e4c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9937 sec, SCN: 0x0000.6ff61b62):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.7003db4b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.70585721):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.70e8e5de):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.7127b23a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.714f2bf9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.7192edc9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.719a8497):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.71a20e93):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.71b973f9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15029 sec, SCN: 0x0000.7234c7bb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.7282b56f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.72c7f46a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.72cfe960):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4819 sec, SCN: 0x0000.72d8090a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.7346b2a2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.735bb0c4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.73bc2037):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.73c43e8b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.73d36625):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.73e07ade):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.74150f8c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.741e5e3a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4391 sec, SCN: 0x0000.743a0a43):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.743fe83c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15019 sec, SCN: 0x0000.745a80bd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.749c3a6c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.74a7f264):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9923 sec, SCN: 0x0000.74d45587):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4662 sec, SCN: 0x0000.74fea3d6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.750807f3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.754a624d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.757db8d5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.758d989c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9922 sec, SCN: 0x0000.75af702d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.75e9a7a6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.75fdf80e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.764afb48):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.76c7273b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.76cd7466):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15027 sec, SCN: 0x0000.76dbcbc9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4817 sec, SCN: 0x0000.77110711):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.7717cb99):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.771ea731):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.7725b589):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.772c6762):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9910 sec, SCN: 0x0000.773317ed):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.7741993a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.7763f32d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.77ce306e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.77d68b0d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.77ddb828):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.77e57929):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.77ecaf74):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.780967b0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.786b186b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.78b1feeb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.78c4e4b7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.78cda263):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.78dd960b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.78eddeae):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.794b9d93):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.7952b990):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.79986095):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.79a05106):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.79b2004b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9926 sec, SCN: 0x0000.79d186e3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.7a226856):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15023 sec, SCN: 0x0000.7a2f4990):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=24947 sec, SCN: 0x0000.7a453eba):
+ORA-15080: synchronous I/O operation to a disk failed
+ORA-27063: number of bytes read/written is incorrect
+ORA-15080: synchronous I/O operation to a disk failed
+ORA-27063: number of bytes read/written is incorrect
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.7a801f02):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.7a87d967):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.7a8fb58d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.7ae13ae5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.7aef67ce):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.7af62591):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=19850 sec, SCN: 0x0000.7b15989f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.7b3f8b4e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4824 sec, SCN: 0x0000.7b611ca1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15036 sec, SCN: 0x0000.7b75239d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.7badd3ba):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.7bcc1245):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.7bd91748):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15029 sec, SCN: 0x0000.7be18c1a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.7c0804f2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.7c1ae3f3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4454 sec, SCN: 0x0000.7c770d52):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.7c7ab550):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.7c8a153e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.7c996b28):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9922 sec, SCN: 0x0000.7ca04328):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.7ca25d1b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15033 sec, SCN: 0x0000.7d1b8577):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.7d3eb761):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.7d466f7b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.7d5e02f8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9921 sec, SCN: 0x0000.7d82b8dd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.7db1abdb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.7db7dad2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.7e2cac66):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.7e38600f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.7e3e3fec):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.7e9102a7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.7e9794e8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15038 sec, SCN: 0x0000.7ea634fa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.7ece34f0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.7eec2358):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.7ef9e4a7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.7f004a55):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.7f08a893):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.7f4b5152):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.7f5a32f0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.7fad8cba):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.7fb56e69):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.7fbd496d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.7fc3d29e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9924 sec, SCN: 0x0000.7fca9c7e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=19839 sec, SCN: 0x0000.7fd83c0b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.8008894d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.8010b3a1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9916 sec, SCN: 0x0000.80274369):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.80872e9d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.808f6523):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.8096d3a7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4821 sec, SCN: 0x0000.809d37e3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9906 sec, SCN: 0x0000.80a362e7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9926 sec, SCN: 0x0000.80af57e3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.80e6bb94):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.80ed66cb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.80f4082c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.80fa77df):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9912 sec, SCN: 0x0000.8100acd1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.810ce2e6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.814004a1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.81465490):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.814d98e3):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.81704ed6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.81a487bf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.81b4780a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.81bb8d14):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4832 sec, SCN: 0x0000.81c1cf37):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.81ce2f93):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.820b9581):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.8212d31b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.821d0215):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.82241be7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.82303f93):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=24947 sec, SCN: 0x0000.8237935a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.8264e15e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4821 sec, SCN: 0x0000.8272dcaf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15017 sec, SCN: 0x0000.829befc0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.82c1a260):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.82d29117):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4819 sec, SCN: 0x0000.82db2d3c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.82f617cd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.832be9dd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.8332a68a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.83411cf8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.8354cee4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.838ca93a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.8394d17e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.839c359b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.83b11987):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.83b749d1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9923 sec, SCN: 0x0000.83c3051a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.83f6dc95):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.83fe3497):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.840df4d8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.84153512):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.841c9f90):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9909 sec, SCN: 0x0000.8422f04e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.8495442e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.84ce849c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9925 sec, SCN: 0x0000.84eee408):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.85305b41):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.854ff148):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.856c07a6):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.857810e4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.85825263):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9911 sec, SCN: 0x0000.858bedc0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.85e1c991):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.85eece4c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.860bcf9c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.8618f6de):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.86766305):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.8688851a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.869a3dc1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.86ad1827):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9915 sec, SCN: 0x0000.86d78c2d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=24964 sec, SCN: 0x0000.87828019):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.87b455c0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.87c2872e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.87daa553):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.87e71671):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.87f3439b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.8807c0b1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15031 sec, SCN: 0x0000.88107818):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.884ce314):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.886e9324):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.88809128):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4323 sec, SCN: 0x0000.8890188c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.8897e2c7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.88a16f94):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.88aa21f5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15021 sec, SCN: 0x0000.88b337c8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.88e8acf5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.891e0480):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.892ec5db):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.8949bd0a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.8985133a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.89bdf482):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.89dfc67b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.89f4be3d):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.89fdfa94):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9908 sec, SCN: 0x0000.8a06ee14):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.8a45031d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.8a6630ec):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.8a77a392):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15031 sec, SCN: 0x0000.8a8d4faa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.8ad25efd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.8ae7bd65):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.8af7907c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.8b05e8c7):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.8c019451):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.8c0fcb76):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.8c1d5a7b):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.8c381f97):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.8c427caa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.8c4ad71d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.8c870969):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.8c969e59):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.8ca42994):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.8cb24b75):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.8cbf8de0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.8cca5018):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9919 sec, SCN: 0x0000.8cd2b49a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15031 sec, SCN: 0x0000.8ce19539):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4802 sec, SCN: 0x0000.8d0d4b14):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.8d63d783):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.8d737c86):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.8dec36ed):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.8e659abe):
+ORA-04021: timeout occurred while waiting to lock object 
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=19843 sec, SCN: 0x0000.8e942e6d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.8ed74f7d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.8eef945c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.8f57be0e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.8fb251b5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.8fdcc1b9):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.8fe99834):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.8ff60622):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.90014f89):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.9059df32):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.9064b961):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.90d091f2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.90db0627):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.90ecdfbf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.90ff84ca):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.9108a7e7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.91111e4e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.911898b7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.91e8e390):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4822 sec, SCN: 0x0000.91f35537):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.91fd6240):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.92078e7e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.92131889):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9914 sec, SCN: 0x0000.921f7884):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=24950 sec, SCN: 0x0000.923b4f30):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.92636eeb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.926e9acd):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.92928715):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.929c430e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.92a34f3b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15023 sec, SCN: 0x0000.92b77dc2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.92ebdd32):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.92f6c5cb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.93025c77):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.930d9de0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.9317255e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.931e3f2f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=15050 sec, SCN: 0x0000.9332d9ce):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.936c3dc2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.93765a5d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.9381a195):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.938d4412):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.9396cea5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=19839 sec, SCN: 0x0000.93ad4531):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.947054b2):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.947cee6c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4815 sec, SCN: 0x0000.949258c0):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.949c8505):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.94a6a1c4):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.94af9cbf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9925 sec, SCN: 0x0000.94b6cfac):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9923 sec, SCN: 0x0000.94c23208):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.94ec243f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.95033b18):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.9520afa7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9913 sec, SCN: 0x0000.9530f38b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9917 sec, SCN: 0x0000.953cc78a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.956a0aee):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.9581e33d):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.9596f1fa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9920 sec, SCN: 0x0000.959f225c):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.95d595da):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.95dd8348):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.95ea2a11):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.95fa2eb5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.9606e027):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4803 sec, SCN: 0x0000.9610d727):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.961b637a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4805 sec, SCN: 0x0000.96233186):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4819 sec, SCN: 0x0000.962a3e87):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.963132da):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=9918 sec, SCN: 0x0000.963929fb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.9668fdea):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.9677a2eb):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.968234aa):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4808 sec, SCN: 0x0000.968d6bba):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4813 sec, SCN: 0x0000.96a2770e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.96aadee1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4819 sec, SCN: 0x0000.97031a91):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.970e42be):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4812 sec, SCN: 0x0000.97185d16):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4804 sec, SCN: 0x0000.97308c7b):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.9737633f):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.973f1731):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.976c2bb7):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.9778d7ad):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4816 sec, SCN: 0x0000.97a8ae3e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4811 sec, SCN: 0x0000.97af39ab):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.97b4f2d8):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.99ae46a5):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4806 sec, SCN: 0x0000.99b391b1):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.99b789cf):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.99d46551):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.99df6e8e):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4807 sec, SCN: 0x0000.9c797192):
+WARNING: inbound connection timed out (ORA-3136)
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=45086 sec, SCN: 0x0000.9f154978):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4824 sec, SCN: 0x0000.9f7ff210):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4809 sec, SCN: 0x0000.9f8ae687):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.9f99bf9a):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4814 sec, SCN: 0x0000.9fde9589):
+ORA-01555 caused by SQL statement below (SQL ID: 14sfxt15rx7dm, Query Duration=4810 sec, SCN: 0x0000.9fe7706e):
+hlwzfdb2.__db_cache_size=18320719872
+hlwzfdb1.__db_cache_size=15300820992
+hlwzfdb2.__java_pool_size=134217728
+hlwzfdb1.__java_pool_size=67108864
+hlwzfdb2.__large_pool_size=201326592
+hlwzfdb1.__large_pool_size=201326592
+hlwzfdb1.__oracle_base='/u02/app/oracle'#ORACLE_BASE set from environment
+hlwzfdb2.__oracle_base='/u02/app/oracle'#ORACLE_BASE set from environment
+hlwzfdb2.__pga_aggregate_target=8589934592
+hlwzfdb1.__pga_aggregate_target=8589934592
+hlwzfdb2.__sga_target=21474836480
+hlwzfdb1.__sga_target=21474836480
+hlwzfdb2.__shared_io_pool_size=0
+hlwzfdb1.__shared_io_pool_size=0
+hlwzfdb2.__shared_pool_size=2684354560
+hlwzfdb1.__shared_pool_size=5771362304
+hlwzfdb2.__streams_pool_size=0
+hlwzfdb1.__streams_pool_size=0
+*.audit_file_dest='/u02/app/oracle/admin/hlwzfdb/adump'
+*.audit_trail='NONE'
+*.cluster_database=true
+*.compatible='11.2.0.4.0'
+*.control_files='+DATA/hlwzfdb/controlfile/current.260.892550233'
+*.db_block_size=8192
+*.db_create_file_dest='+DATA'
+*.db_domain=''
+*.db_files=2000
+*.db_name='hlwzfdb'
+*.deferred_segment_creation=FALSE
+*.diagnostic_dest='/u02/app/oracle'
+*.dispatchers='(PROTOCOL=TCP) (SERVICE=hlwzfdbXDB)'
+hlwzfdb2.instance_number=2
+hlwzfdb1.instance_number=1
+*.log_archive_dest_1='LOCATION=+FRA'
+*.log_archive_format='%t_%s_%r.dbf'
+*.open_cursors=300
+*.pga_aggregate_target=2147483648
+hlwzfdb2.pga_aggregate_target=8589934592
+hlwzfdb1.pga_aggregate_target=8589934592
+*.processes=3000
+*.remote_listener='hlwzf-scan:1521'
+*.remote_login_passwordfile='exclusive'
+*.sessions=3305
+hlwzfdb2.sga_max_size=21474836480
+hlwzfdb1.sga_max_size=21474836480
+*.sga_target=8589934592
+hlwzfdb2.sga_target=21474836480
+hlwzfdb1.sga_target=21474836480
+hlwzfdb2.thread=2
+hlwzfdb1.thread=1
+hlwzfdb2.undo_tablespace='UNDOTBS2'
+hlwzfdb1.undo_tablespace='UNDOTBS1'
